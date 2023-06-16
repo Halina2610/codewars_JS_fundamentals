@@ -1,4 +1,5 @@
 //task 1
+
 function greet() {
     return 'Hello World!'// Write a function "greet" that returns "hello world!"
 }
