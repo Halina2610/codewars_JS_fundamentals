@@ -36,6 +36,12 @@ var countSheep = function (num){
 }
 
 //task 4
+//Write a function which converts the input string to uppercase.
+
+function makeUpperCase(str) {
+  return str.toLocaleUpperCase();
+}
+
 //task 5
 //task 6
 //task 7
