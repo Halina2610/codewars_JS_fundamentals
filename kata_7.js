@@ -44,8 +44,32 @@ function getGrade (s1, s2, s3) {
    }// Code here
 }
 //task 4
+/*This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.*/
+function simpleMultiplication(number) {
+  if (number % 2 === 0) {
+     return number * 8
+     } else {
+       return number * 9
+     }// your code........
+}
+
+
 //task 5
+/*You ask a small girl,"How old are you?" She always says, "x years old", where x is a random number between 0 and 9.
+
+Write a program that returns the girl's age (0-9) as an integer.
+
+Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". 
+The first character in the string is always a number.*/
+
+function getAge(inputString){
+ return parseInt(inputString); // метод parseInt() возвращает целое число из строки!
+}
+
 //task 6
+/**/
+
+
 //task 7
 //task 8
 //task 9
