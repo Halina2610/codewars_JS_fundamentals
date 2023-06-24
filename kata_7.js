@@ -1,5 +1,6 @@
 //task 1
-/*The starship Enterprise has run into some problem when creating a program to greet everyone as they come aboard. It is your job to fix the code and get the program working again!
+/*The starship Enterprise has run into some problem when creating a program to greet everyone as they come aboard. It is your 
+job to fix the code and get the program working again!
 
 Example output:
 
@@ -106,8 +107,49 @@ function finalGrade (exam, projects) {
 }
 
 //task 8
+/*Task
+Please refer to two example above and write your first JS function.
+
+mission 1:
+
+use keyword function to define your function, function name should be helloWorld(don't forget the () and {})
+
+mission 2:
+
+use keyword var (or let or const) to define a variable str, value of str should be a string: "Hello World!"(don't forget the =).
+
+mission 3:
+
+type the console.log() in the next line (don't forget to put the str in the parentheses).
+
+When you have finished the work, click "Run Tests" to see if your code is working properly.
+
+In the end, click "Submit" to submit your code pass this kata.
+
+Series*/
+function helloWorld(){
+  const str="Hello World!"
+  console.log(str)
+  }//refer to the example and write your first JS function
+
 //task 9
+/*It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, 
+the original string. You don't have to worry with strings with less than two characters.*/
+
+function removeChar(str){
+  return str.slice(1,-1)//метод удаляет выбранные элементы встроке. 
+
+};
+
 //task 10
+/*Given an array of integers, return a new array with each value doubled.
+For example:
+[1, 2, 3] --> [2, 4, 6]*/
+
+function maps(x){
+return x.map(i => i * 2) //вернет все удвоенные числа. Если изменить оператор и число можно все числа уменьшить вдвое, отнять или добавить число. 
+}
+
 //task 11
 //task 12
 //task 13
