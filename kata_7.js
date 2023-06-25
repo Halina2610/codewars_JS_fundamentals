@@ -151,6 +151,22 @@ return x.map(i => i * 2) //вернет все удвоенные числа. Е
 }
 
 //task 11
+/*Messi goals function
+Messi is a soccer player with goals in three leagues:
+
+LaLiga
+Copa del Rey
+Champions
+Complete the function to return his total number of goals in all three leagues.
+
+Note: the input will always be valid.
+
+For example:
+
+5, 10, 2  -->  17*/
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+    return laLigaGoals + copaDelReyGoals + championsLeagueGoals;// code goes here
+}
 //task 12
 //task 13
 //task 14
