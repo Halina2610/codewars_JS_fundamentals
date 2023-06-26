@@ -168,8 +168,61 @@ function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
     return laLigaGoals + copaDelReyGoals + championsLeagueGoals;// code goes here
 }
 //task 12
+/*You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
+If it is a square, return its area. If it is a rectangle, return its perimeter.
+
+Example(Input1, Input2 --> Output):
+
+6, 10 --> 32
+3, 3 --> 9*/
+const areaOrPerimeter = function(l , w) {
+  if ( l === w) {
+    return l * w
+    }else{
+      return (l + w) * 2
+      } //Return your answer
+};
+
 //task 13
+/*Fix the function
+I created this function to add five to any number that was passed in to it and return the new value. It doesn't throw any errors but it 
+returns the wrong number.
+
+Can you help me fix the function?*/
+function addFive(num) {
+  const total = num + 5
+  return total
+}
 //task 14
+/*Americans are odd people: in their buildings, the first floor is actually the ground floor and there is no 13th floor (due to superstition).
+
+Write a function that given a floor in the american system returns the floor in the european system.
+
+With the 1st floor being replaced by the ground floor and the 13th floor being removed, the numbers move down to 
+take their place. In case of above 13, they move down by two because there are two omitted numbers below them.
+
+Basements (negatives) stay the same as the universal level.
+
+More information here
+
+Examples
+1  =>  0 
+0  =>  0
+5  =>  4
+15  =>  13
+-3  =>  -3
+FUNDAMENTALS
+Suggest kata description edits*/
+
+function getRealFloor(n) {
+   if (n <= 0) {
+     return n
+     } else if (n >= 13) {
+       return n-2;
+       } else{
+        return n - 1  
+       }
+}
 //task 15
 //task 16
 //task 17
