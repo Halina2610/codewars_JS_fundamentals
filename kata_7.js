@@ -260,7 +260,10 @@ function between(a, b) {
 }
 
 //task 17
-/*A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
+/*A hero is on his way to the castle to complete his mission. However, he's been told that the castle is 
+surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no
+idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and 
+move forward to fight another specific given number of dragons, will he survive?
 
 Return true if yes, false otherwise :)*/
 
@@ -274,5 +277,90 @@ if ( bullets >= (dragons * 2)) {
 
 
 //task 18
+/*
+Учебный JS №7: if..else и тернарный оператор
+В JavaScript if..elseэто самый простой условный оператор, он состоит из трех частей: condition, statement1, statement2, например:
+
+if (condition) statementa
+else           statementb
+Это означает, что если условие истинно, то выполнить оператор a, в противном случае выполнить оператор b. Если оператор a или 
+оператор b состоит из более чем одной строки, вам нужно добавить {и }в начале и в конце операторов в JS, чтобы сохранить тот же
+отступ на Python и поместить endв Ruby, где он действительно заканчивается.
+
+Например, если мы хотим определить, является ли число нечетным или четным, мы можем написать такой код:
+
+function oddEven(n){
+  if (n % 2 == 1) return "odd number";
+  else            return "even number";
+}
+Если есть более одного условия для оценки, мы можем использовать составной оператор if...else. Например:
+
+function oldYoung(age){
+  if (age < 16)      return "children"
+  else if (age < 50) return "young man"   //use "else if" if needed
+  else               return "old man"
+}
+Эта функция возвращает другое значение в зависимости от возраста параметра.
+
+Выглядит очень сложно? Ну, JS и Ruby также поддерживают, ternary operatorи у Python тоже есть что-то подобное:
+
+condition ? statementa : statementb
+Условие и оператор разделены знаком «?», другой оператор разделен знаком «:» как в Ruby, так и в JS; в 
+Python вы помещаете условие посередине двух альтернатив. Два приведенных выше примера можно упростить с помощью тернарного оператора:
+
+function oddEven(n){
+  return n%2 == 1 ? "odd number" : "even number";
+}
+function oldYoung(age){
+  return age < 16 ? "children" : age < 50 ? "young man" : "old man";
+}
+Задача:
+Полная функция saleHotdogs/ SaleHotDogs/ sale_hotdogs, функция принимает 1 параметр: n, n — 
+количество хот-догов, которые купит клиент, разные числа имеют разные цены (см. следующую таблицу),
+возвращает, сколько денег покупатель потратит, чтобы купить это количество хот-догов.
+
+количество хот-догов	цена за единицу (центы)
+п < 5	100
+n >= 5 и n < 10	95
+п >= 10	90
+Вы можете использовать if..else или тернарный оператор для его завершения.
+*/
+
+function saleHotdogs(n){
+  if (n < 5 ) {
+    return 100 * n 
+  }else if (n >= 5 && n < 10) {
+    return 95 * n 
+  } else {
+    return 90 * n 
+  }
+}
+
+// Или
+function saleHotdogs(n){
+  return n < 5 ? 100 * n : n >= 5 && n < 10 ? 95 * n : 90 * n 
+}
+
 //task 19
+/**/
 //task 20
+/**/
+//task 21
+/**/
+
+//task 22
+/**/
+
+//task 23
+/**/
+
+//task 24
+/**/
+//task 25
+/**/
+//task 26
+/**/
+//task 27
+/**/
+//task 28
+/**/
