@@ -223,9 +223,56 @@ function getRealFloor(n) {
         return n - 1  
        }
 }
+
+
 //task 15
+/*In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+Examples
+makeNegative(1);    // return -1
+makeNegative(-5);   // return -5
+makeNegative(0);    // return 0
+makeNegative(0.12); // return -0.12
+Notes
+The number can be negative already, in which case no change is required.
+Zero (0) is not checked for any specific sign. Negative zeros make no mathematical sense.
+ОСНОВЫ*/
+function makeNegative(num) {
+  if(num  === 0) return num;
+  if (num > 0) return num * (-1);
+  if (num < 0 ) return num;
+// Code?
+}
+
 //task 16
+/*Complete the function that takes two integers (a, b, where a < b) and return an array of all integers between the input parameters, including them.
+
+For example:
+
+a = 1
+b = 4
+--> [1, 2, 3, 4]*/
+function between(a, b) {
+  let array = [];
+  for (let i = a; i <= b; i++) array.push(i);
+ 
+  return array;// your code here
+}
+
 //task 17
+/*A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
+
+Return true if yes, false otherwise :)*/
+
+function hero(bullets, dragons){
+if ( bullets >= (dragons * 2)) {
+    return true
+    }else{
+  return false
+  }//Get Coding!
+}
+
+
 //task 18
 //task 19
 //task 20
