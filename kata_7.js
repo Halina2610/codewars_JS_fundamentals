@@ -342,22 +342,127 @@ function saleHotdogs(n){
 }
 
 //task 19
-/**/
+/*This function should test if the factor is a factor of base.
+
+Return true if it is a factor or false if it is not.
+
+About factors
+Factors are numbers you can multiply together to get another number.
+
+2 and 3 are factors of 6 because: 2 * 3 = 6
+
+You can find a factor by dividing numbers. If the remainder is 0 then the number is a factor.
+You can use the mod operator (%) in most languages to check for a remainder
+For example 2 is not a factor of 7 because: 7 % 2 = 1
+
+Note: base is a non-negative number, factor is a positive number.*/
+
+function checkForFactor (base, factor) {
+  if (base % factor === 0) {
+    return true
+  }else{
+    return false
+    }// code here
+}
+
 //task 20
-/**/
+/*You get an array of numbers, return the sum of all of the positives ones.
+
+Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+Note: if there is nothing to sum, the sum is default to 0.*/
+
+function positiveSum(arr) {
+let sum = 0; //значение по умолчанию (if there is nothing to sum, the sum is default to 0.)
+ for(let i = 0; i < arr.length; i++) { //цикл 
+   if(arr[i] >= 0) {
+    sum += arr[i];
+  }
+ }
+return sum;
+}
+
 //task 21
-/**/
+/*You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is
+running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left.
+
+Considering these factors, write a function that tells you if it is possible to get to the pump or not.
+
+Function should return true if it is possible and false if not.*/
+
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+let myDistance = mpg * fuelLeft
+if(myDistance >= distanceToPump){ 
+   return true; 
+  }else{ 
+   return false 
+}// TODO
+};
 
 //task 22
-/**/
+/*You're writing code to control your town's traffic lights. You need a function to handle each change from green, to yellow, to red, and then to green again.
+
+Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state 
+the light should change to.
+
+For example, when the input is green, output should be yellow.*/
+
+function updateLight(current) {
+  return current === 'yellow' ? 'red' : current === 'green' ? 'yellow' : 'green';
+  //your code here!
+
+}
+
 
 //task 23
-/**/
+/*Let's play! You have to return which player won! In case of a draw return Draw!.
+
+Examples(Input1, Input2 --> Output):
+
+"scissors", "paper" --> "Player 1 won!"
+"scissors", "rock" --> "Player 2 won!"
+"paper", "paper" --> "Draw!"*/
+
+const rps = (p1, p2) => {
+ if (p1 === p2) return "Draw!";
+ if ((p1 === 'rock' && p2 === 'scissors') || (p1 === 'paper' && p2 === 'rock') || (p1 === 'scissors' && p2 === 'paper')) return "Player 1 won!";
+ if ((p2 === 'rock' && p1 === 'scissors') || (p2 === 'paper' && p1 === 'rock') || (p2 === 'scissors' && p1 === 'paper')) return "Player 2 won!";  
+};
 
 //task 24
-/**/
+/*Implement a function which convert the given boolean value into its string representation.
+
+Note: Only valid inputs will be given.*/
+
+function booleanToString(b){
+  return b.toString()//your code here
+}
+
 //task 25
-/**/
+/*After a hard quarter in the office you decide to get some rest on a vacation. So you will book a flight for you and your girlfriend 
+and try to leave all the mess behind you.
+
+You will need a rental car in order for you to get around in your vacation. The manager of the car rental makes you some good offers.
+
+Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent 
+the car for 3 or more days, you get $20 off your total.
+
+Write a code that gives out the total amount for different days(d).*/
+function rentalCarCost(d) {
+  let costDay = 40;
+  let myCosts = d * costDay;
+  if ( d < 3) {
+    return myCosts;
+   } else if ( d >= 7 ) {
+    return myCosts - (50);
+    } else if ( d >= 3 && d < 7) {
+    return myCosts - (20);
+ }else {
+      return myCosts
+      }
+}// Your solution here
+
 //task 26
 /**/
 //task 27
