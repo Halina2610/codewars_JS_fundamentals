@@ -464,8 +464,67 @@ function rentalCarCost(d) {
 }// Your solution here
 
 //task 26
-/**/
+/*DESCRIPTION:
+Who remembers back to their time in the schoolyard, when girls would take a flower and tear its petals, saying each of 
+the following phrases each time a petal was torn:
+
+"I love you"
+"a little"
+"a lot"
+"passionately"
+"madly"
+"not at all"
+If there are more than 6 petals, you start over with "I love you" for 7 petals, "a little" for 8 petals and so on.
+
+When the last petal was torn there were cries of excitement, dreams, surging thoughts and emotions.
+
+Your goal in this kata is to determine which phrase the girls would say at the last petal for a flower of a 
+given number of petals. The number of petals is always greater than 0.*/
+
+function howMuchILoveYou(nbPetals) {
+   if(nbPetals%6 == 1) return ("I love you");
+   if(nbPetals%6 == 2) return ("a little");
+   if(nbPetals%6 ==3)return ("a lot");
+   if(nbPetals%6 ==4) return ("passionately");
+   if(nbPetals%6 == 5) return ("madly");
+   return ("not at all");
+  // your code
+}
+
 //task 27
-/**/
+/*Kids drink toddy.
+Teens drink coke.
+Young adults drink beer.
+Adults drink whisky.
+Make a function that receive age, and return what they drink.
+
+Rules:
+
+Children under 14 old.
+Teens under 18 old.
+Young under 21 old.
+Adults have 21 or more.
+Examples: (Input --> Output)
+
+13 --> "drink toddy"
+17 --> "drink coke"
+18 --> "drink beer"
+20 --> "drink beer"
+30 --> "drink whisky"*/
+
+function peopleWithAgeDrink(old) {
+ if (old < 14) return "drink toddy"
+ if (old < 18 && old >= 14) return "drink coke"
+ if (old < 21 && old >= 18) return "drink beer"
+ if (old >= 21) return "drink whisky"
+     
+}
 //task 28
-/**/
+/*Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.*/
+function evenOrOdd(number) {
+  if (number % 2) {
+    return "Odd";
+    }else{
+      return "Even";
+    } 
+}
