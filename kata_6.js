@@ -81,21 +81,15 @@ let sum = 0;
 }
 
 //Solutions 6
-/*Write a function that takes an array of numbers and returns the sum of the numbers. 
-The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
+/*Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".8*/
 
-Examples
-Input: [1, 5.2, 4, 0, -1]
-Output: 9.2
-
-Input: []
-Output: 0
-
-Input: [-2.398]
-Output: -2.398*/
-
-
-
+function problem(x){
+  if (typeof(x) === 'number') {
+   return x * 50 + 6//your code here
+  }else {
+    return "Error"
+  }
+}
 
 //Solutions 7
 /**/
