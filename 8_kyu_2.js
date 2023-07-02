@@ -92,9 +92,47 @@ function problem(x){
 }
 
 //Solutions 7
-/**/
+/*Write a function that returns a string in which firstname is swapped with last name.
+
+Example(Input --> Output)
+
+"john McClane" --> "McClane john"*/
+
+function nameShuffler(str){
+  return str.split(" ").reverse().join(" ") // метод .split(" ") разбивает строку на массив, .reverse() - меняет порядокна обратный, .join(" ") - соединияет строку в массив
+   //Shuffle It
+}
+
 //Solutions 8
-/**/
+/*Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+For example, for [1, 2, 2] it should return 9 because 
+1
+2
++
+2
+2
++
+2
+2
+=
+9
+1 
+2
+ +2 
+2
+ +2 
+2
+ =9.*/
+
+function squareSum(numbers) {
+    let result = 0
+    numbers.forEach( number => {
+        result += (number * number)
+    })
+    return result
+}
+
 //Solutions 9
 /**/
 //Solutions 10
