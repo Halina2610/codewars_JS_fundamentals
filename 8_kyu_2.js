@@ -149,20 +149,126 @@ const stringToNumber = function(str){
 }
 
 //Solutions 10
-/**/
+/*Your task is to create a function that does four basic mathematical operations.
 
+The function should take three arguments - operation(string/char), value1(number), value2(number).
+The function should return result of numbers after applying the chosen operation.
 
+Examples(Operator, value1, value2) --> output
+('+', 4, 7) --> 11
+('-', 15, 18) --> -3
+('*', 5, 5) --> 25
+('/', 49, 7) --> 7 */
+
+function basicOp(operation, value1, value2)
+{ 
+  if (operation == "*") return value1 * value2;
+  if (operation == "/") return value1 / value2;
+  if (operation == "+") return value1 + value2;
+  if (operation == "-") return value1 - value2;
+  // Code
+}
 
 //Solutions 11
-/**/
+/*Alex just got a new hula hoop, he loves it but feels discouraged because his little brother is better than him
+
+Write a program where Alex can input (n) how many times the hoop goes round and it will return him an encouraging message :)
+
+If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
+If he doesn't get 10 hoops, return the string "Keep at it until you get it".
+*/
+
+function hoopCount (n) {
+   if (n < 10) return "Keep at it until you get it";
+  if (n >= 10) return "Great, now move on to tricks";//your code goes here    
+}
+
 //Solutions 12
-/**/
+/*When provided with a number between 0-9, return it in words.
+
+Input :: 1
+
+Output :: "One".*/
+
+function switchItUp(number){
+switch (number) {
+    case 0  :
+    return "Zero"; 
+    break;
+    case 1 :
+    return "One"; 
+    break;
+    case 2 :
+    return "Two"; 
+    break;
+    case 3 :
+    return "Three"; 
+    break;
+    case 4  :
+    return "Four"; 
+    break;
+    case 5  :
+    return "Five"; 
+    break;
+    case 6  :
+    return "Six"; 
+    break;
+    case 7  :
+    return "Seven"; 
+    break;
+    case 8  :1
+    return "Eight"; 
+    break;
+    case 9  :
+    return "Nine"; 
+    break;
+    default:
+    return ("Sorry")
+}
+    //Write your own Code!
+}
+
 //Solutions 13
-/**/
+/*Bob needs a fast way to calculate the volume of a cuboid with three values: 
+the length, width and height of the cuboid. Write a function to help Bob with this calculation.*/
+
+class Kata {
+  static getVolumeOfCuboid(length, width, height) {
+   let cuboid;
+    return cuboid = length * width * height;// your code here
+  }
+}
+
 //Solutions 14
-/**/
+/*Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent 
+ranging from 0 to n ( inclusive ).
+
+Examples
+n = 0  ==> [1]        # [2^0]
+n = 1  ==> [1, 2]     # [2^0, 2^1]
+n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]*/
+
+function powersOfTwo(n){
+    let arr = [];
+  for(let i=0; i<=n; i++)
+    arr[i] = 2**i;
+  return arr;
+}
+
 //Solutions 15
-/**/
+/*Write a function to split a string and convert it into an array of words.
+
+Examples (Input ==> Output):
+"Robin Singh" ==> ["Robin", "Singh"]
+
+"I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]*/
+
+function stringToArray(string){
+  return string.split(" ") 
+	// code code code
+
+}
+
 //Solutions 16
 /**/
 //Solutions 17
