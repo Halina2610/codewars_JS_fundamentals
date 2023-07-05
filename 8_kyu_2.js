@@ -346,15 +346,97 @@ function xor(a, b) {
   
 
 //Solutions 21
-/**/
+/*Write a function that removes the spaces from the string, then return the resultant string.
+
+Examples:
+
+Input -> Output
+"8 j 8   mBliB8g  imjB8B8  jl  B" -> "8j8mBliB8gimjB8B8jlB"
+"8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd" -> "88Bifk8hB8BB8BBBB888chl8BhBfd"
+"8aaaaa dddd r     " -> "8aaaaaddddr"*/
+
+
+function noSpace(x){
+return x.split(' ').join(''); // .split вернет упорядоченный массив, .join('') вернет новую строку
+	// можно заменить на  return x.replaceAll(' ', ''); все совпадения " "заменяет на "", передать можно любое значение 
+}
+function noSpace(str){
+
+return str.replace(/\s/g, '');
+}
+
+//.replace(/\s/g, '') — это код для удаления пробелов в строке — \s — это
+// регулярное выражение для «пробелов», а g — это «глобальный» флаг, означающий совпадение ВСЕХ \s (пробелов).
+
 //Solutions 22
-/**/
+/*Clock shows h hours, m minutes and s seconds after midnight.
+
+Your task is to write a function which returns the time since midnight in milliseconds.
+
+Example:
+h = 0
+m = 1
+s = 1
+
+result = 61000
+Input constraints:
+
+0 <= h <= 23
+0 <= m <= 59
+0 <= s <= 59*/
+function past(h, m, s){
+ return (h * 3600000 + m * 60000 + s * 1000) //#Happy Coding! ^_^
+}
+
+
 //Solutions 23
-/**/
+/*We need a simple function that determines if a plural is needed or not. It should take a number, and return true if a plural
+should be used with that number or false if not. This would be useful when printing out a string such as 5 minutes, 14 apples, or 1 sun.
+
+You only need to worry about english grammar rules for this kata, where anything that isn't singular (one of something), it is 
+plural (not one of something).
+
+All values will be positive integers or floats, or zero.*/
+function plural(n) {
+    if (n == 1) return false;
+  return true;// ...
+}
+
 //Solutions 24
-/**/
+/*Deoxyribonucleic acid, DNA is the primary information storage molecule in biological systems. It is composed of four nucleic acid bases Guanine 
+('G'), Cytosine ('C'), Adenine ('A'), and Thymine ('T').
+
+Ribonucleic acid, RNA, is the primary messenger molecule in cells. RNA differs slightly from DNA its chemical structure and contains no Thymine.
+In RNA Thymine is replaced by another nucleic acid Uracil ('U').
+
+Create a function which translates a given DNA string into RNA.
+
+For example:
+
+"GCAT"  =>  "GCAU"
+The input string can be of arbitrary length - in particular, it may be empty. All input is guaranteed to be valid, i.e.
+each input string will only ever consist of 'G', 'C', 'A' and/or 'T'.*/
+
+function DNAtoRNA(dna) {
+  return dna.replaceAll("T", "U")// create a function which returns an RNA sequence from the given DNA sequence
+}
+
+
 //Solutions 25
-/**/
+/*Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+
+Examples
+"hello"     -->  "hll"
+"codewars"  -->  "cdwrs"
+"goodbye"   -->  "gdby"
+"HELLO"     -->  "HELLO"
+don't worry about uppercase vowels
+y is not considered a vowel for this kata*/
+
+ function shortcut (string) {
+  return string.replaceAll(/[aeiou]/gi, "");
+}
+
 //Solutions 26
 /**/
 //Solutions 27
