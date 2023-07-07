@@ -1211,11 +1211,39 @@ function colorOf(r,g,b){
   return '#' + colorRed + colorGreen + colorBlue;
 }
 
-
 //Solutions 41
-/**/
+/*
+Create a combat function that takes the player's current health and the amount of damage recieved, and returns the player's new health. 
+Health can't be less than 0.
+*/
+
+function combat(health, damage) {
+  if (health < damage) {
+    return 0;
+  } else {
+    return health - damage;
+    }// Write your code here
+}
+
 //Solutions 42
-/**/
+/*Your task is to make two functions ( max and min, or maximum and minimum, etc., depending on the language ) that receive a list of integers as input, and return the largest and lowest number in that list, respectively.
+
+Examples (Input -> Output)
+* [4,6,2,1,9,63,-134,566]         -> max = 566, min = -134
+* [-52, 56, 30, 29, -54, 0, -110] -> min = -110, max = 56
+* [42, 54, 65, 87, 0]             -> min = 0, max = 87
+* [5]                             -> min = 5, max = 5
+Notes
+You may consider that there will not be any empty arrays/vectors.*/
+var min = function(list){
+    
+    return Math.min(...list);
+}
+
+var max = function(list){
+    
+    return Math.max(...list);
+}
 //Solutions 43
 /**/
 //Solutions 44
