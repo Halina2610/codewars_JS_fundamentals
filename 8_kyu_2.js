@@ -888,19 +888,337 @@ function padIt(str,n){
 
 
 //Solutions 36
-/**/
+/*The for loop is a very frequently used loop in JS.
+
+Recall in lesson 9 we wrote a while loop:
+
+function sum1_100(){
+  var sum=0,num=1
+  while (num<=100){
+    sum+=num;
+    num++;
+  }
+  return sum;
+}
+We can rewrite it using a for loop, like this:
+
+function sum1_100(){
+  for (var sum=0,num=1;num<=100;num++){
+    sum+=num;
+  }
+  return sum;
+}
+As you see, there are three parts in the parentheses, separated by ";". The first part, var sum=0,num=1, is the initialization. 
+This part will run before the loop starts. The second part, num<=100 is the conditional expression. The conditional expression is 
+checked before the start of each time through the loop. When the value of the expression is false, the loop will be terminated.
+The third part, num++ will run after the code block, and is usually used for increasing and decreasing variables.
+
+For the example above, the running order of the code is:
+
+                              <--- back to part 2
+                  -------------------------------------------
+                  |                 true                    |
+var sum=0,num=1  --->  num<=100 ?  ------> code block---> num++
+                                |  
+                           false|
+                       loop terminated
+When you need to traverse an array, you can use the for loop to access each element using its index. Here's an example:
+
+function displayElements(array){
+  for (var i=0;i<array.length;i++){
+    console.log(array[i]);
+  }
+}
+This function will display every element of the array on your screen.
+
+Ok, lesson is over, let's do a task with for.
+
+Task
+The function pickIt accepts 1 parameter, arr, which is an array of numbers. We need to traverse arr by using a for loop. 
+If an element is an odd number, push it to the odd array, and if it's an even number, push it to the evenarray.
+
+I've defined two arrays odd and even in the function, and also wrote the return statement. Your work is to write a for loop.
+
+If you forgot how to push an element to an array, please refer to lesson 4.*/
+
+function pickIt(arr){
+  var odd=[],even=[];
+  for (i = 0; i < arr.length; i++) { // проходится по каждому эллементу
+    if (arr[i] % 2 == 0) { //если элемент четный
+      even.push(arr[i]); //добавить в even массив
+    } else {
+      odd.push(arr[i]); //иначе в нечетный
+    }
+    console.log(arr[i]);
+  } //coding here
+  
+  return [odd,even];
+}
+
 
 //Solutions 37
-/**/
+/*We have seen break in the switch statement, it can jump out the switch statement. it can also be used in the loop statement. an example:
+
+function findFirstOddNumber(arr){
+  var result;
+  for (var i=0;i<arr.length;i++){
+    if (arr[i]%2==1){
+      result=arr[i];
+      break;
+    }
+  }
+  return result;
+}
+In this example, for loop traverse the array arr. when the first odd number found, break statement will jump out the for loop.
+
+In the loop statement, we can use continue skipping some code. for example, the following code ignores negative values:
+
+function dontDisplayNegative(arr){
+  for (var i=0;i<arr.length;i++){
+    if (arr[i]<0) continue;   
+    console.log(arr[i])
+  }
+}
+In this example, console.log(arr[i]) is never executed for negative element. thanks to continue.
+Through the use of break and continue, you can make the loop statement more flexible and convenient.
+Ok, lesson is over. let's us do some task with break and continue.
+
+Task
+Coding in function grabDoll. function accept 1 parameter:dolls. it's a string array, a list of some dolls.
+You need traverse dolls by using for loop. If element is "Hello Kitty" or "Barbie doll", you should push it to a bag(bag is an array,
+I've defined in the function); if it's other strings, we should use continue skip it.
+When the bag has three element, bag is full. You should use break jump out the loop; If bag is not full, you should traverse dolls until the last element.
+Return the bag after for loop finished.
+You should use for, break and continue in your code. otherwise, your solution may not pass this kata.*/
+
+function grabDoll(dolls){
+  const bag=[];
+  for (let i = 0; i < dolls.length; i++) {
+    if (dolls[i] !== "Hello Kitty" && dolls[i] !== "Barbie doll") continue; //пропустить, если dolls[i] не равно китти или барби.
+    bag.push(dolls[i]);
+    if (bag.length === 3) break; //закончить если длинна массива строго равно 3
+  }
+  return bag;
+}
 
 //Solutions 38
-/**/
+/*In lesson #11, we learned that the for loop can be used to traverse an array. If we want to traverse an object, we can use a variant of the for: for..in. This can traverse all the keys of the object. An example:
+
+function showObjectKeys(obj){
+  for (var key in obj){
+    console.log(key);
+  }
+}
+function showObjectValues(obj){
+  for (var key in obj){
+    console.log(obj[key]);
+  }
+}
+var ob={item1:"This",item2:"is",item3:"an",item4:"example"};
+console.log("keys of ob:")
+showObjectKeys(ob);
+console.log("values of ob:")
+showObjectValues(ob);
+Code results:
+
+keys of ob:
+item1
+item2
+item3
+item4
+values of ob:
+This
+is
+an
+example
+for..in can also be used with arrays. Modifying the code above:
+
+function showObjectKeys(obj){
+  for (var key in obj){
+    console.log(key);
+  }
+}
+function showObjectValues(obj){
+  for (var key in obj){
+    console.log(obj[key]);
+  }
+}
+var arr=["one","two","three"];
+console.log("keys of arr:")
+showObjectKeys(arr);
+console.log("values of arr:")
+showObjectValues(arr);
+Code results:
+
+keys of arr:
+0
+1
+2
+values of arr:
+one
+two
+three
+As you can see, the keys are the indices of the array elements. Important: When using for..in with an array, 
+the key (index) is always a string, not a number. In the example above, the keys are "0", "1", and "2". 
+We can't see the quotes because console.log() doesn't show them.
+
+Although for..in can be used to traverse the array, this is discouraged because in some cases the order may be unexpected. 
+So it's recommended that you use another variant for this: for..of (new in ES6). for..of can traverse all the values of the array 
+(without accessing them through their index). Function showObjectValues() from above can be modified like this:
+
+function showArrayValues(arr){
+  for (var value of arr){
+    console.log(value);
+  }
+}
+Ok, lesson is over, let's do a task with for..in.
+
+Task
+The function giveMeFive accepts 1 parameter, obj, which is an object.
+
+Create an array (which you will eventually return). Then, traverse obj, checking each key and value. 
+If the length of the key is equal to 5, then push the key to your array. Separately, 
+if the length of the value is equal to 5, then push the value to your array.
+
+At the end, return your array.
+You should use for..in in your code, otherwise your solution may not pass this kata.*/
+
+function giveMeFive(obj) {
+  var myArray = [];
+  for (var key in obj) {
+    if (key.length === 5) myArray.push(key);
+    if (obj[key].length === 5) myArray.push(obj[key]);
+  }
+  return myArray;
+}
+//coding here
+
+
 
 //Solutions 39
-/**/
+/*The number is a basic data type in javascript. javascript also supports Number objects. The object is the original value of the package object. When necessary, JavaScript automatically converts between the original data and the objects. You can explicitly create a Number object with the constructor Number(). Although it is not necessary to do so. Usage:
+
+var num=new Number(value);
+Parameter value is the value of the Number object to be created or the value to be converted into a numeric value.
+
+Constructor Number() can be used without operator new and directly as a transformation function to use. In this way, when the Number is called, it transforms itself into a number and then returns the converted value (or NaN). Usage:
+
+var num=Number(value);
+Number object has two generic object properties: constructor and prototype. all the objects in JS have these two properties. they are two very important attributes. because of their importance and complexity, we will learn it in the future.
+
+In addition to the above two, the Number objects have five attributes (or called constant):
+
+MAX_VALUE: The maximum number that can be expressed in JS. Usage:Number.MAX_VALUE. Its approximate value is 1.7976931348623157e+308
+
+MIN_VALUE: The minimum number that can be expressed in JS(Close to 0, but not negative). Usage:Number.MIN_VALUE. Its approximate value is 5e-324
+
+NaN: Non numeric value. Abbreviations of "Not a Number". When some arithmetic operations (such as the square root of a negative number) 
+or the result of the method are not numbers, return NaN. Usage:Number.NaN. It can be simplified and replaced with NaN.
+
+Please note: the results of comparison between NaN and other values are always not equal(including its own). Therefore, can not be compared
+with Number.NaN to detect a value is not a number but can only call isNaN() to compare.
+
+NEGATIVE_INFINITY: The value represents the negative infinity. Usage:Number.NEGATIVE_INFINITY. When a number is generated in an arithmetic
+operation or function and it smaller than -Number.MAX_VALUE return this value. It can be simplified and replaced with -Infinity.
+
+POSITIVE_INFINITY: The value represents the positive infinity. Usage:Number.POSITIVE_INFINITY. When a number is generated in an arithmetic 
+operation or function and it larger than Number.MAX_VALUE return this value. It can be simplified and replaced with Infinity.
+
+Ok, lesson is over. let's us do some task with Number objects.
+
+Task
+Coding in function whatNumberIsIt. function accept 1 parameter:n. it's a number.
+
+To judge the number n. If n is one of the above five constants, return one of these string:
+
+"Input number is Number.MAX_VALUE"
+"Input number is Number.MIN_VALUE"
+"Input number is Number.NaN"
+"Input number is Number.NEGATIVE_INFINITY"
+"Input number is Number.POSITIVE_INFINITY"
+Other values should return "Input number is xxx". xxx means this number.
+
+For example:
+
+whatNumberIsIt(1/0) should return "Input number is Number.POSITIVE_INFINITY"
+whatNumberIsIt(100) should return "Input number is 100"
+What you need to think about is how to judge it correctly and effectively and don't forget isNaN().*/
+
+function whatNumberIsIt(n){
+  if (n == Number.MAX_VALUE) return "Input number is Number.MAX_VALUE";
+  if (n == Number.MIN_VALUE) return "Input number is Number.MIN_VALUE";
+  if (n == Number.NaN ) return "Input number is Number.NaN";
+  if (n == Number.NEGATIVE_INFINITY) return "Input number is Number.NEGATIVE_INFINITY";
+  if (n == Number.POSITIVE_INFINITY) return "Input number is Number.POSITIVE_INFINITY";//coding here
+  if (n == n) return "Input number is "+ n;
+  return "Input number is Number.NaN";
+} //можно сделать через switch оператор 
+
+
 //Solutions 40
-/**/
+/*This time we learn about two useful methods of Number objects: toString() and toLocaleString(). the basic usage of the two methods is to convert a number into a string. look at this:
+
+var num=111;
+var a=num.toString(), 
+    b=num.toLocaleString(), 
+    c=num+""
+console.log([a,b,c])   //put them to an array, we can see the quotes
+//output: [ '111', '111', '111' ]
+We can see, if you just want to translate a number into a string representation, in the general case the results obtained in these ways is the same. I love to use the last one, cause I'm lazy ;-)
+
+But these two methods have other uses as well.
+
+When used toLocaleString() converted a number to a string. the results obtained are in the order of the local numeric format(I don't have this experience. it is always the same as toString() in my here).
+
+And toString() of Number object has a more special usage: According to the base output different strings.
+
+NumberObject.toString(radix)
+radix is optional parameter. if ignored it, the output will be the default decimal. If not, like this:
+
+var num=111;
+var a=num.toString(2), 
+    b=num.toString(8), 
+    c=num.toString(16), 
+console.log([a,b,c])
+//output: [ '1101111', '157', '6f' ]
+They are converted to binary, octal and hexadecimal.
+
+Ok, lesson is over. let's us do some task with Number .toString().
+
+Task
+Coding in function colorOf. function accept 3 parameter:r g b. It means value of color red green and blue. the value range is 0-255.
+
+Use toString(16) Convert numbers r g b to hex string form. at last, combine them to a web color code and return it.
+
+the color code should starting with "#". and then use 2 characters per color.
+
+for example:
+
+colorOf(255,0,0) should return "#ff0000"
+colorOf(0,111,0) should return "#006f00"
+colorOf(1, 2 ,3) should return "#010203"
+That's all of your work. My work is print your color code on your screen.*/
+
+function colorOf(r,g,b){
+  let colorRed = r.toString(16);
+  let colorGreen = g.toString(16);
+  let colorBlue = b.toString(16);
+  
+  colorRed  = colorRed .length < 2 ? '0' + colorRed : colorRed ;
+  colorGreen = colorGreen.length < 2 ? '0' + colorGreen : colorGreen;
+  colorBlue = colorBlue.length < 2 ? '0' + colorBlue : colorBlue;
+  
+  return '#' + colorRed + colorGreen + colorBlue;
+}
+
 
 //Solutions 41
 /**/
-
+//Solutions 42
+/**/
+//Solutions 43
+/**/
+//Solutions 44
+/**/
+//Solutions 45
+/**/
