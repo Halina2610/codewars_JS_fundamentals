@@ -1096,15 +1096,19 @@ function giveMeFive(obj) {
 
 
 //Solutions 39
-/*The number is a basic data type in javascript. javascript also supports Number objects. The object is the original value of the package object. When necessary, JavaScript automatically converts between the original data and the objects. You can explicitly create a Number object with the constructor Number(). Although it is not necessary to do so. Usage:
+/*The number is a basic data type in javascript. javascript also supports Number objects. The object is the original value of the package object. 
+When necessary, JavaScript automatically converts between the original data and the objects. You can explicitly create a Number object with the 
+constructor Number(). Although it is not necessary to do so. Usage:
 
 var num=new Number(value);
 Parameter value is the value of the Number object to be created or the value to be converted into a numeric value.
 
-Constructor Number() can be used without operator new and directly as a transformation function to use. In this way, when the Number is called, it transforms itself into a number and then returns the converted value (or NaN). Usage:
+Constructor Number() can be used without operator new and directly as a transformation function to use. In this way, when the Number is called,
+it transforms itself into a number and then returns the converted value (or NaN). Usage:
 
 var num=Number(value);
-Number object has two generic object properties: constructor and prototype. all the objects in JS have these two properties. they are two very important attributes. because of their importance and complexity, we will learn it in the future.
+Number object has two generic object properties: constructor and prototype. all the objects in JS have these two properties.
+they are two very important attributes. because of their importance and complexity, we will learn it in the future.
 
 In addition to the above two, the Number objects have five attributes (or called constant):
 
@@ -1156,7 +1160,8 @@ function whatNumberIsIt(n){
 
 
 //Solutions 40
-/*This time we learn about two useful methods of Number objects: toString() and toLocaleString(). the basic usage of the two methods is to convert a number into a string. look at this:
+/*This time we learn about two useful methods of Number objects: toString() and toLocaleString(). 
+the basic usage of the two methods is to convert a number into a string. look at this:
 
 var num=111;
 var a=num.toString(), 
@@ -1164,11 +1169,13 @@ var a=num.toString(),
     c=num+""
 console.log([a,b,c])   //put them to an array, we can see the quotes
 //output: [ '111', '111', '111' ]
-We can see, if you just want to translate a number into a string representation, in the general case the results obtained in these ways is the same. I love to use the last one, cause I'm lazy ;-)
+We can see, if you just want to translate a number into a string representation, in the general case the results obtained in these ways is the same. 
+I love to use the last one, cause I'm lazy ;-)
 
 But these two methods have other uses as well.
 
-When used toLocaleString() converted a number to a string. the results obtained are in the order of the local numeric format(I don't have this experience. it is always the same as toString() in my here).
+When used toLocaleString() converted a number to a string. the results obtained are in the order of the local numeric format(I don't have this experience.
+it is always the same as toString() in my here).
 
 And toString() of Number object has a more special usage: According to the base output different strings.
 
@@ -1226,7 +1233,8 @@ function combat(health, damage) {
 }
 
 //Solutions 42
-/*Your task is to make two functions ( max and min, or maximum and minimum, etc., depending on the language ) that receive a list of integers as input, and return the largest and lowest number in that list, respectively.
+/*Your task is to make two functions ( max and min, or maximum and minimum, etc., depending on the language ) that receive a list 
+of integers as input, and return the largest and lowest number in that list, respectively.
 
 Examples (Input -> Output)
 * [4,6,2,1,9,63,-134,566]         -> max = 566, min = -134
@@ -1245,8 +1253,86 @@ var max = function(list){
     return Math.max(...list);
 }
 //Solutions 43
-/**/
+/*Given an array of integers.
+
+Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 
+0 is neither positive nor negative.
+
+If the input is an empty array or is null, return an empty array.
+
+Example
+For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].*/
+
+function countPositivesSumNegatives(input) {
+ if (input === null || input.length === 0) {
+   return [];
+   }
+    let arr = [0, 0];
+
+    for(var i = 0; i < input.length; i++) {
+        if(input[i] <= 0) {
+            arr[1] += input[i];
+      } else {
+            arr[0] += 1;
+      }
+    }
+    return arr;// your code here
+}
+
 //Solutions 44
-/**/
+/*In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+Example
+filter_list([1,2,'a','b']) == [1,2]
+filter_list([1,'a','b',0,15]) == [1,0,15]
+filter_list([1,2,'aasf','1','123',123]) == [1,2,123]*/
+function filter_list(l) {
+  return l.filter(Number.isInteger);
+// Return a new array with the strings filtered out
+}
 //Solutions 45
+/*
+Complete the function which converts a binary number (given as a string) to a decimal number.*/
+function binToDec(bin){
+  return parseInt(bin, 2)// ...
+}
+
+
+//Solutions 46
+/*Inspired by the development team at Vooza, write the function that
+
+accepts the name of a programmer, and
+returns the number of lightsabers owned by that person.
+The only person who owns lightsabers is Zach, by the way. He owns 18, which is an awesome number of lightsabers. Anyone else owns 0.
+
+Note: your function should have a default parameter.
+
+For example(Input --> Output):
+
+"anyone else" --> 0
+"Zach" --> 18*/
+
+function howManyLightsabersDoYouOwn(name) {
+  if (name !== "Zach") return 0;
+  return 18
+}
+//Solutions 47
 /**/
+
+//Solutions 48
+/**/
+//Solutions 49
+/**/
+//Solutions 50
+/**/
+//Solutions 51
+/**/
+//Solutions 52
+/**/
+//Solutions 53
+/**/
+//Solutions 54
+/**/
+
+
+
