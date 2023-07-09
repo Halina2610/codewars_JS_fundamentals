@@ -81,7 +81,8 @@ let sum = 0;
 }
 
 //Solutions 6
-/*Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".8*/
+/*Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a 
+string it should return "Error".8*/
 
 function problem(x){
   if (typeof(x) === 'number') {
@@ -99,7 +100,8 @@ Example(Input --> Output)
 "john McClane" --> "McClane john"*/
 
 function nameShuffler(str){
-  return str.split(" ").reverse().join(" ") // метод .split(" ") разбивает строку на массив, .reverse() - меняет порядокна обратный, .join(" ") - соединияет строку в массив
+  return str.split(" ").reverse().join(" ") // метод .split(" ") разбивает строку на массив, .reverse() - 
+	меняет порядокна обратный, .join(" ") - соединияет строку в массив
    //Shuffle It
 }
 
@@ -685,7 +687,8 @@ var arr=[];
 ......
 if (arr.length) return "arr has elements";
 else            return "arr is empty";
-You can see, arr is defined as an array, arr.length should be a number value, but in this example, the number value should convert to bool value. 
+You can see, arr is defined as an array, arr.length should be a number value, but in this example, the number value should 
+convert to bool value. 
 it means, if arr.length value is 0, convert value to false, if arr.length value is not 0, convert value to true.
 
 These values are converted to false in the conditional statement:
@@ -873,7 +876,8 @@ str: a string representing the string to pad. We will pad it with "*" symbols on
 n: a number indicating how many times to pad the string.
 Behaviour
 You need to write a loop statement within the function that loops n times. Each time through the loop it will add one * to str, 
-alternating on which side it is padded: the first time will add a * to the left side of str, the second time will add a * to the right side, and so on.
+alternating on which side it is padded: the first time will add a * to the left side of str, the second time will add a * to the right 
+side, and so on.
 
 Finally, return the padded string.*/
 
@@ -957,7 +961,8 @@ function pickIt(arr){
 
 
 //Solutions 37
-/*We have seen break in the switch statement, it can jump out the switch statement. it can also be used in the loop statement. an example:
+/*We have seen break in the switch statement, it can jump out the switch statement. it can also be used in the loop statement. 
+an example:
 
 function findFirstOddNumber(arr){
   var result;
@@ -987,7 +992,8 @@ Task
 Coding in function grabDoll. function accept 1 parameter:dolls. it's a string array, a list of some dolls.
 You need traverse dolls by using for loop. If element is "Hello Kitty" or "Barbie doll", you should push it to a bag(bag is an array,
 I've defined in the function); if it's other strings, we should use continue skip it.
-When the bag has three element, bag is full. You should use break jump out the loop; If bag is not full, you should traverse dolls until the last element.
+When the bag has three element, bag is full. You should use break jump out the loop; If bag is not full, you should 
+traverse dolls until the last element.
 Return the bag after for loop finished.
 You should use for, break and continue in your code. otherwise, your solution may not pass this kata.*/
 
@@ -1002,7 +1008,8 @@ function grabDoll(dolls){
 }
 
 //Solutions 38
-/*In lesson #11, we learned that the for loop can be used to traverse an array. If we want to traverse an object, we can use a variant of the for: for..in. This can traverse all the keys of the object. An example:
+/*In lesson #11, we learned that the for loop can be used to traverse an array. If we want to traverse an object, 
+we can use a variant of the for: for..in. This can traverse all the keys of the object. An example:
 
 function showObjectKeys(obj){
   for (var key in obj){
@@ -1096,14 +1103,17 @@ function giveMeFive(obj) {
 
 
 //Solutions 39
-/*The number is a basic data type in javascript. javascript also supports Number objects. The object is the original value of the package object. 
-When necessary, JavaScript automatically converts between the original data and the objects. You can explicitly create a Number object with the 
+/*The number is a basic data type in javascript. javascript also supports Number objects. The object is the original 
+value of the package object. 
+When necessary, JavaScript automatically converts between the original data and the objects. You can explicitly create
+a Number object with the 
 constructor Number(). Although it is not necessary to do so. Usage:
 
 var num=new Number(value);
 Parameter value is the value of the Number object to be created or the value to be converted into a numeric value.
 
-Constructor Number() can be used without operator new and directly as a transformation function to use. In this way, when the Number is called,
+Constructor Number() can be used without operator new and directly as a transformation function to use. In this way, when 
+the Number is called,
 it transforms itself into a number and then returns the converted value (or NaN). Usage:
 
 var num=Number(value);
@@ -1114,18 +1124,23 @@ In addition to the above two, the Number objects have five attributes (or called
 
 MAX_VALUE: The maximum number that can be expressed in JS. Usage:Number.MAX_VALUE. Its approximate value is 1.7976931348623157e+308
 
-MIN_VALUE: The minimum number that can be expressed in JS(Close to 0, but not negative). Usage:Number.MIN_VALUE. Its approximate value is 5e-324
+MIN_VALUE: The minimum number that can be expressed in JS(Close to 0, but not negative). Usage:Number.MIN_VALUE. Its 
+approximate value is 5e-324
 
-NaN: Non numeric value. Abbreviations of "Not a Number". When some arithmetic operations (such as the square root of a negative number) 
+NaN: Non numeric value. Abbreviations of "Not a Number". When some arithmetic operations (such as the square root of a
+negative number) 
 or the result of the method are not numbers, return NaN. Usage:Number.NaN. It can be simplified and replaced with NaN.
 
-Please note: the results of comparison between NaN and other values are always not equal(including its own). Therefore, can not be compared
+Please note: the results of comparison between NaN and other values are always not equal(including its own). Therefore, 
+can not be compared
 with Number.NaN to detect a value is not a number but can only call isNaN() to compare.
 
-NEGATIVE_INFINITY: The value represents the negative infinity. Usage:Number.NEGATIVE_INFINITY. When a number is generated in an arithmetic
+NEGATIVE_INFINITY: The value represents the negative infinity. Usage:Number.NEGATIVE_INFINITY. When a number is generated in
+an arithmetic
 operation or function and it smaller than -Number.MAX_VALUE return this value. It can be simplified and replaced with -Infinity.
 
-POSITIVE_INFINITY: The value represents the positive infinity. Usage:Number.POSITIVE_INFINITY. When a number is generated in an arithmetic 
+POSITIVE_INFINITY: The value represents the positive infinity. Usage:Number.POSITIVE_INFINITY. When a number is generated in 
+an arithmetic 
 operation or function and it larger than Number.MAX_VALUE return this value. It can be simplified and replaced with Infinity.
 
 Ok, lesson is over. let's us do some task with Number objects.
@@ -1169,12 +1184,14 @@ var a=num.toString(),
     c=num+""
 console.log([a,b,c])   //put them to an array, we can see the quotes
 //output: [ '111', '111', '111' ]
-We can see, if you just want to translate a number into a string representation, in the general case the results obtained in these ways is the same. 
+We can see, if you just want to translate a number into a string representation, in the general case the
+results obtained in these ways is the same. 
 I love to use the last one, cause I'm lazy ;-)
 
 But these two methods have other uses as well.
 
-When used toLocaleString() converted a number to a string. the results obtained are in the order of the local numeric format(I don't have this experience.
+When used toLocaleString() converted a number to a string. the results obtained are in the order of the local 
+numeric format(I don't have this experience.
 it is always the same as toString() in my here).
 
 And toString() of Number object has a more special usage: According to the base output different strings.
@@ -1220,7 +1237,9 @@ function colorOf(r,g,b){
 
 //Solutions 41
 /*
-Create a combat function that takes the player's current health and the amount of damage recieved, and returns the player's new health. 
+
+Create a combat function that takes the player's current health and the amount of damage recieved, 
+and returns the player's new health. 
 Health can't be less than 0.
 */
 
@@ -1280,7 +1299,8 @@ function countPositivesSumNegatives(input) {
 }
 
 //Solutions 44
-/*In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+/*In this kata you will create a function that takes a list of non-negative integers and strings
+and returns a new list with the strings filtered out.
 
 Example
 filter_list([1,2,'a','b']) == [1,2]
@@ -1317,12 +1337,48 @@ function howManyLightsabersDoYouOwn(name) {
   return 18
 }
 //Solutions 47
-/**/
+/*Write a function that takes an array of strings as an argument and returns a sorted array
+containing the same strings, ordered from shortest to longest.
 
+For example, if this array were passed as an argument:
+
+["Telescopes", "Glasses", "Eyes", "Monocles"]
+
+Your function would return the following array:
+
+["Eyes", "Glasses", "Monocles", "Telescopes"]
+
+All of the strings in the array passed to your function will be different lengths, so you will 
+not have to decide how to order multiple strings of the same length.*/
+function sortByLength (array) {
+return array.sort(function(a, b) {
+    return a.length - b.length; 
+  });
+  // Return an array containing the same strings, ordered from shortest to longest
+};
 //Solutions 48
-/**/
+/*Description:
+Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+
+Examples
+replace("Hi!") === "H!!"
+replace("!Hi! Hi!") === "!H!! H!!"
+replace("aeiou") === "!!!!!"
+replace("ABCDE") === "!BCD!"*/
+function replace(s){
+  return s.replaceAll(/[aeiou]/gi, "!");//coding and coding....
+  
+  
+}
 //Solutions 49
-/**/
+/*Implement a function that accepts 3 integer values a, b, c. The function should return true
+if a triangle can be built with the sides of given length and false in any other case.
+
+(In this case, all triangles must have surface greater than 0 to be accepted).*/
+function isTriangle(a,b,c){
+ if ((a + b > c) && (a + c > b) && (b + c > a)) return true;
+ return false;
+}
 //Solutions 50
 /**/
 //Solutions 51
