@@ -337,7 +337,8 @@ false xor true == true // exactly one of the two expressions are true
 true xor true == false // Both are true.  "xor" only returns true if EXACTLY one of the two expressions evaluate to true.
 Task
 Since we cannot define keywords in Javascript (well, at least I don't know how to do it), your task is to define a function xor(a, b) 
-where a and b are the two expressions to be evaluated. Your xor function should have the behaviour described above, returning true if exactly 
+where a and b are the two expressions to be evaluated. Your xor function should have the behaviour described above, returning true if
+exactly 
 one of the two expressions evaluate to true, false otherwise.*/
 
 function xor(a, b) {
@@ -393,7 +394,8 @@ function past(h, m, s){
 
 //Solutions 23
 /*We need a simple function that determines if a plural is needed or not. It should take a number, and return true if a plural
-should be used with that number or false if not. This would be useful when printing out a string such as 5 minutes, 14 apples, or 1 sun.
+should be used with that number or false if not. This would be useful when printing out a string such as 5 minutes, 14 apples, or
+1 sun.
 
 You only need to worry about english grammar rules for this kata, where anything that isn't singular (one of something), it is 
 plural (not one of something).
@@ -405,7 +407,8 @@ function plural(n) {
 }
 
 //Solutions 24
-/*Deoxyribonucleic acid, DNA is the primary information storage molecule in biological systems. It is composed of four nucleic acid bases Guanine 
+/*Deoxyribonucleic acid, DNA is the primary information storage molecule in biological systems. It is composed of four nucleic acid 
+bases Guanine 
 ('G'), Cytosine ('C'), Adenine ('A'), and Thymine ('T').
 
 Ribonucleic acid, RNA, is the primary messenger molecule in cells. RNA differs slightly from DNA its chemical structure and contains no Thymine.
@@ -442,11 +445,13 @@ y is not considered a vowel for this kata*/
 //Solutions 26
 /*The wide-mouth frog is particularly interested in the eating habits of other creatures.
 
-He just can't stop asking the creatures he encounters what they like to eat. But, then he meets the alligator who just LOVES to eat wide-mouthed frogs!
+He just can't stop asking the creatures he encounters what they like to eat. But, then he meets the alligator who just LOVES to eat
+wide-mouthed frogs!
 
 When he meets the alligator, it then makes a tiny mouth.
 
-Your goal in this kata is to create complete the mouth_size method this method takes one argument animal which corresponds to the animal encountered by the frog.
+Your goal in this kata is to create complete the mouth_size method this method takes one argument animal which corresponds to 
+the animal encountered by the frog.
 If this one is an alligator (case-insensitive) return small otherwise return wide.*/
 
 function mouthSize(animal) {
@@ -528,7 +533,8 @@ the resulting zygote will be XX or female. If the sperm cell contains a Y chromo
 
 Determine if the sex of the offspring will be male or female based on the X or Y chromosome present in the male's sperm.
 
-If the sperm contains the X chromosome, return "Congratulations! You're going to have a daughter."; If the sperm contains the Y chromosome,
+If the sperm contains the X chromosome, return "Congratulations! You're going to have a daughter."; If the sperm contains 
+the Y chromosome,
 return "Congratulations! You're going to have a son.";*/
 
 
@@ -538,14 +544,16 @@ function chromosomeCheck(sperm) {
 }
 
 //Solutions 30
-/*In javascript, Number is one of basic data types. It can be positive: 1,2,3, negative:-1,-100 , integer:123,456, decimal:3.1415926,-8.88 etc..
+/*In javascript, Number is one of basic data types. It can be positive: 1,2,3, negative:-1,-100 , integer:123,456, 
+decimal:3.1415926,-8.88 etc..
 
 Numbers can use operators such as + - * / %
 
 Task
 I've written five function equal1,equal2,equal3,equal4,equal5, defines six global variables v1 v2 v3 v4 v5 v6, every 
 function has two local variables a,b, please set the appropriate value for the two variables(select from v1--v6), 
-making these function return value equal to 100. the function equal1 is completed, please refer to this example to complete the following functions.
+making these function return value equal to 100. the function equal1 is completed, please refer to this example to complete 
+the following functions.
 
 When you have finished the work, click "Run Tests" to see if your code is working properly.
 
@@ -609,7 +617,8 @@ console.log(arr)     //[1,2,3,4]
 arr.pop();           //remove the last element from arr
 console.log(arr)     //[1,2,3]
 Task
-I've written five functions. Each function receives a parameter arr which is an array. Complete the functions using arr inside the function bodies.
+I've written five functions. Each function receives a parameter arr which is an array. Complete the functions using arr inside
+the function bodies.
 
     1. getLength(arr)    should return length of arr
     2. getFirst(arr)     should return the first element of arr
@@ -1380,15 +1389,133 @@ function isTriangle(a,b,c){
  return false;
 }
 //Solutions 50
-/**/
+/*Terminal game move function
+In this game, the hero moves from left to right. The player rolls the dice and moves the number of spaces 
+indicated by the dice two times.
+
+Create a function for the terminal game that takes the current position of the hero and the roll (1-6) and return the new position.
+
+Example:
+move(3, 6) should equal 15*/
+function move (position, roll) {
+ return position + roll * 2; // return the new position
+}
+
 //Solutions 51
-/**/
+/*Task Overview
+Given a non-negative integer n, write a function to_binary/ToBinary which returns that number in a binary format.
+
+to_binary(1)  /* should return 1 */
+to_binary(5)  /* should return 101 */
+to_binary(11) /* should return 1011 */
+Example:
+
+toBinary(1)  /* should return 1 */
+toBinary(5)  /* should return 101 */
+toBinary(11) /* should return 1011 */*/
+function toBinary(n){
+    return parseInt(n.toString(2));
+  }
+  
 //Solutions 52
-/**/
+/*Write a function called calculate that takes 3 values. The first and third values are numbers. 
+The second value is a character. If the character is "+" , "-", "*", or "/", the function will return 
+the result of the corresponding mathematical function on the two numbers. If the string is not one of 
+the specified characters, the function should return null (throw an ArgumentException in C#).
+
+calculate(2,"+", 4); //Should return 6
+calculate(6,"-", 1.5); //Should return 4.5
+calculate(-4,"*", 8); //Should return -32
+calculate(49,"/", -7); //Should return -7
+calculate(8,"m", 2); //Should return null
+calculate(4,"/",0) //should return null*/
+function calculate(num1, operation, num2) {
+ if (operation === "+") return num1 + num2;
+ if (operation === "-") return num1 - num2;
+ if (operation === "*") return num1 * num2;
+ if(operation === "/") return num2 !== 0 ? num1/num2 : null;
+ return null;
+
+ 
+ 
+ //TODO: make a basic calculator. 
+}
 //Solutions 53
-/**/
+/*Create a function which answers the question "Are you playing banjo?".
+If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+The function takes a name as its only argument, and returns one of the following strings:
+
+name + " plays banjo" 
+name + " does not play banjo"
+Names given are always valid strings.*/
+
+function areYouPlayingBanjo(name) {
+  // Implement me
+  if (name[0] === "r" || name[0] === "R") return name + " plays banjo";
+  return name + " does not play banjo"
+}
 //Solutions 54
+/*Define a function that removes duplicates from an array of numbers and returns it as a result.
+
+The order of the sequence has to stay the same.*/
+
+function distinct(a) {
+  return [...new Set(a)];
+}
+//Solutions 55
+/*In this Kata we are passing a number (n) into a function.
+
+Your code will determine if the number passed is even (or not).
+
+The function needs to return either a true or false.
+
+Numbers may be positive or negative, integers or floats.
+
+Floats with decimal part non equal to zero are considered UNeven for this kata.*/
+function testEven(n) {
+   if (n%2 === 0) return true;
+  return false;//Your awesome code here!
+}
+//Solutions 56
+/*Backstory
+
+As a treat, I'll let you read part of the script from a classic 'I'm Alan Partridge episode:
+
+Lynn: Alan, there’s that teacher chap.
+Alan: Michael, if he hits me, will you hit him first?
+Michael: No, he’s a customer. I cannot hit customers. I’ve been told. I’ll go and get some stock.
+Alan: Yeah, chicken stock.
+Phil: Hello Alan.
+Alan: Lynn, hand me an apple pie. And remove yourself from the theatre of conflict.
+Lynn: What do you mean?
+Alan: Go and stand by the yakults. The temperature inside this apple turnover is 1,000 degrees. 
+If I squeeze it, a jet of molten Bramley apple is going to squirt out. Could go your way, could 
+go mine. Either way, one of us is going down.
+Alan is known for referring to the temperature of the apple turnover as Hotter than the sun!.
+According to space.com the temperature of the sun's corona is 2,000,000 degrees Celsius, but we will ignore the science for now.
+
+Task
+Your job is simple, if x squared is more than 1000, return It's hotter than the sun!!, else, return Help 
+yourself to a honeycomb Yorkie for the glovebox.
+
+Note: Input will either be a positive integer (or a string for untyped languages).*/
+function apple(x){
+if (x*x > 1000){
+  return "It's hotter than the sun!!"
+}else{
+  return "Help yourself to a honeycomb Yorkie for the glovebox."
+}
+}
+//Solutions 57
 /**/
+//Solutions 58
+/**/
+//Solutions 59
+/**/
+//Solutions 60
+/**/
+
 
 
 
