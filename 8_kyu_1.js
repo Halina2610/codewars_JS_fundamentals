@@ -537,7 +537,9 @@ function main (verb, noun){
 }
 
 //task 30
-/*You have an award-winning garden and every day the plants need exactly 40mm of water. You created a great piece of JavaScript to calculate the amount of water your plants will need when you have taken into consideration the amount of rain water that is forecast for the day. Your jealous neighbour hacked your computer and filled your code with bugs.
+/*You have an award-winning garden and every day the plants need exactly 40mm of water. You created a great piece of JavaScript to 
+calculate the amount of water your plants will need when you have taken into consideration the amount of rain water that is forecast for the day. 
+Your jealous neighbour hacked your computer and filled your code with bugs.
 
 Your task is to debug the code before your plants die!*/
 
@@ -545,3 +547,58 @@ function rainAmount(mm){
     if (mm >= 40) return "Your plant has had more than enough water for today!";
     if(mm < 40) return 'You need to give your plant ' + ((mm-40)*-1) + 'mm of water';
 }
+
+//task 31
+/*It is easy to join two strings together like this string1 + string2.
+
+Another way to get the desired result would be with string1.concat(string2)
+
+ES6 has introduced another way of joining strings. Your task is to find out what this is and write a function that will 
+add two strings together, there must be a space between the two strings.
+
++ , .concat() & .join() will not be allowed in this exercise. I have also removed some other methods that can be used to cheat!
+
+If one of the arguments is a number your code must coerce it into being a string.*/
+function joinStrings(string1, string2){
+let string = `${string1} ${string2}`;
+return string
+}
+
+//task 32
+/*Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+
+Examples
+"www.codewars.com#about" --> "www.codewars.com"
+"www.codewars.com?page=1" -->"www.codewars.com?page=1"*/
+function removeUrlAnchor(url){
+ return url.split('#')[0];
+
+ // TODO: complete
+}
+//task 33
+/*Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order.
+Essentially, rearrange the digits to create the highest possible number.
+
+Examples:
+Input: 42145 Output: 54421
+
+Input: 145263 Output: 654321
+
+Input: 123456789 Output: 987654321*/
+function descendingOrder(n){
+   return parseInt((n+'').split('').sort().reverse().join('')) //разбить число на масссив чисел, отсортировать по возростанию, сорт без условия сортирует по алфовиту или возростанию, 
+   //перевернуть массив, соеденить массив чисел в одно число .join('')
+}
+//task 34
+/**/
+//task 35
+/**/
+//task 36
+/**/
+//task 37
+/**/
+//task 38
+/**/
+//task 39
+/**/
+
