@@ -105,7 +105,8 @@ return
 
 //task 9
 /*Introduction
-The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
+The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and 
+including the year 200, etc.
 
 Task
 Given a year, return the century it is in.
@@ -163,4 +164,48 @@ function paperwork(n, m) {
     return n * m
   }
 }
-// перешла на 7 kyu
+//task 12
+/*Write function RemoveExclamationMarks which removes all exclamation marks from a given string.*/
+function removeExclamationMarks(s) {
+  return s.replace(/!*/g, "");
+}
+//task 13
+/*Take an array and remove every second element from the array. Always keep the first element and start removing with 
+the next element.
+
+Example:
+["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+None of the arrays will be empty, so you don't have to worry about that!*/
+function removeEveryOther(arr){
+  return arr.filter((item, index) => (index+1) % 2);   //фильтрует каждый второй элемент
+  }
+
+//task 14
+/*You will be given a list of strings. You must sort it alphabetically (case-sensitive, and based on the ASCII values
+of the chars) and then return the first value.
+
+The returned value must be a string, and have "***" between each of its letters.
+
+You should not remove or add elements from/to the array.*/
+
+function twoSort(s) {
+return s.sort().shift().split('').join('***')
+  //shift удаляет нулевой эл. из массива и возвращает его значение. Затем разбиваем массив, 
+    //и возвращаем новый массив с пробелами между буквами ***
+}
+//task 15
+/**/
+//task 16
+/**/
+//task 17
+/**/
+//task 18
+/**/
+//task 19
+/**/
+//task 20
+/**/
+//task 21
+/**/
+
