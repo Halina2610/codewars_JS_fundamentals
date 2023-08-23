@@ -195,13 +195,60 @@ return s.sort().shift().split('').join('***')
     //и возвращаем новый массив с пробелами между буквами ***
 }
 //task 15
-/**/
+/*This code does not execute properly. Try to figure out why*/
+
+const multiply = (a, b)=>{
+ return  a * b //добавила return
+}
+
 //task 16
-/**/
+/*Complete the solution so that it reverses all of the words within the string passed in.
+
+Words are separated by exactly one space and there are no leading or trailing spaces.
+
+Example(Input --> Output):
+"The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"*/
+function reverseWords(str){
+  const words = str.split(' ');
+    
+  const reversedWords = words.reverse();
+  const reversedStr = reversedWords.join(' ');
+  return reversedStr; // reverse those words
+}
 //task 17
-/**/
+/*Jenny has written a function that returns a greeting for a user. However, she's in love with Johnny, 
+and would like to greet him slightly different. She added a special case to her function, but she made a mistake.
+
+Can you help her? 
+function greet(name){
+  return "Hello, " + name + "!";
+  if(name === "Johnny")
+    return "Hello, my love!";
+}*/
+function greet(name){
+    if(name === "Johnny")  {
+      return "Hello, my love!";
+      }else{
+  return "Hello, " + name + "!";
+        
+      }
+}
 //task 18
-/**/
+/*I'm new to coding and now I want to get the sum of two arrays... Actually the sum of all their elements.
+I'll appreciate for your help.
+
+P.S. Each array includes only integer numbers. Output is a number too.
+function arrayPlusArray(arr1, arr2) {
+  return arr1 + arr2; //something went wrong
+}*/
+
+function arrayPlusArray(arr1, arr2) {
+  const sum1 = arr1.reduce((acc, curr) => acc + curr, 0);
+  const sum2 = arr2.reduce((acc, curr) => acc + curr, 0);
+  return sum1 + sum2;
+}
+
+
 //task 19
 /**/
 //task 20
