@@ -250,9 +250,51 @@ function arrayPlusArray(arr1, arr2) {
 
 
 //task 19
-/**/
-//task 20
-/**/
-//task 21
-/**/
+/*Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are 
+positive, non-zero numbers.
 
+Examples:
+1) n =   3, x = 1, y = 3 =>  true because   3 is divisible by 1 and 3
+2) n =  12, x = 2, y = 6 =>  true because  12 is divisible by 2 and 6
+3) n = 100, x = 5, y = 3 => false because 100 is not divisible by 3
+4) n =  12, x = 7, y = 5 => false because  12 is neither divisible by 7 nor 5*/
+
+function isDivisible(n, x, y) {
+  
+  if ( n % x === 0 && n % y === 0) return true
+  return false
+}
+//task 20
+/*It's the academic year's end, fateful moment of your school report. The averages must be calculated. 
+All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
+
+Return the average of the given array rounded down to its nearest integer.
+
+The array will never be empty.*/
+function getAverage(marks) {
+  let sum = 0;
+
+  for (let i = 0; i < marks.length; i++) {
+    sum += marks[i];
+  }
+
+  let average = Math.floor(sum / marks.length);
+  return average;
+}
+
+//task 21
+/*It's bonus time in the big city! The fatcats are rubbing their paws in anticipation... but who is going to make the most money?
+
+Build a function that takes in two arguments (salary, bonus). Salary will be an integer, and bonus a boolean.
+
+If bonus is true, the salary should be multiplied by 10. If bonus is false, the fatcat did not make enough money and must receive only
+his stated salary.
+
+Return the total figure the individual will receive as a string prefixed with "£" (= "\u00A3", JS, Go, Java, Scala, and Julia), "$"
+(C#, C++, Ruby,
+Clojure, Elixir, PHP, Python, Haskell, and Lua) or "¥" (Rust).*/
+function bonusTime(salary, bonus) {
+  let salaryBonus = salary*10
+  if (!bonus) return "£" + salary.toString()
+  return "£" + salaryBonus.toString()// your code here
+}
