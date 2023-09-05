@@ -298,3 +298,82 @@ function bonusTime(salary, bonus) {
   if (!bonus) return "£" + salary.toString()
   return "£" + salaryBonus.toString()// your code here
 }
+
+//task 22
+/*You take your son to the forest to see the monkeys. You know that there are a certain number there (n), but your son is too young to just appreciate the full number, he has to start counting them from 1.
+
+As a good parent, you will sit and count with him. Given the number (n), populate an array with all numbers up to and including that number, but excluding zero.
+
+For example(Input --> Output):
+
+10 --> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ 1 --> [1]*/
+function monkeyCount(n) {
+     const numbers = [];
+  for (let i = 1; i <= n; i++) {
+    numbers.push(i);
+  }
+  return numbers;
+// your code here
+}
+//23 task
+/*The function is not returning the correct values. Can you figure out why?
+
+Example (Input --> Output ):
+
+3 --> "Earth"*/
+
+function getPlanetName(id) {
+  var name;
+  switch(id) {
+    case 1:
+      name = 'Mercury';
+      break;
+    case 2:
+      name = 'Venus';
+      break;
+    case 3:
+      name = 'Earth';
+      break;
+    case 4:
+      name = 'Mars';
+      break;
+    case 5:
+      name = 'Jupiter';
+      break;
+    case 6:
+      name = 'Saturn';
+      break;
+    case 7:
+      name = 'Uranus';
+      break;
+    case 8:
+      name = 'Neptune';
+      break;
+    default:
+      name = 'Unknown';
+  }
+  
+  return name;
+}
+
+//24 task
+/*write me a function stringy that takes a size and returns a string of alternating 1s and 0s.
+
+the string should start with a 1.
+
+a string with size 6 should return :'101010'.
+
+with size 4 should return : '1010'.
+
+with size 12 should return : '101010101010'.
+
+The size will always be positive and will only use whole numbers.*/
+
+function stringy(size) {
+  let result = '';
+  for (let i = 0; i < size; i++) {
+    result += i % 2 === 0 ? '1' : '0';
+  }
+  return result; // your code here 
+}
