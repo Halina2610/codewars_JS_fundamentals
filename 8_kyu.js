@@ -377,3 +377,30 @@ function stringy(size) {
   }
   return result; // your code here 
 }
+//25 task
+/*Make a simple function called greet that returns the most-famous "hello world!".
+
+Style Points
+Sure, this is about as easy as it gets. But how clever can you be to create the most creative 
+"hello world" you can think of? What is a "hello world" solution you would want to show your friends?*/
+
+const greet = () => {
+  return "hello world!";
+}
+
+
+
+//26 task
+/*DESCRIPTION:
+Complete the function which takes two arguments and returns all numbers which are divisible by
+the given divisor. First argument is an array of numbers and the second is the divisor.
+
+Example(Input1, Input2 --> Output)
+[1, 2, 3, 4, 5, 6], 2 --> [2, 4, 6]*/
+
+const divisibleBy = (numbers, divisor) => {
+return numbers.filter(number => number % divisor === 0)
+}
+
+
+//27 task
